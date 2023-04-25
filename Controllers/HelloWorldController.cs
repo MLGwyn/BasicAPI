@@ -11,5 +11,19 @@ namespace BasicAPI.Controllers
     [ApiController]
     public class HelloWorldController : ControllerBase
     {
+        [HttpGet]
+        public string SayHello(string who)
+        {
+            string whoOrWorld = (who == null) ? "World" : who;
+            // if (who == null)
+            // {
+            //     whoOrWorld = "World";
+            // }
+            // else
+            // {
+            //     whoOrWorld = who;
+            // }
+            return $"Hello, {whoOrWorld}. It is currently {DateTime.Now}";
+        }
     }
 }
