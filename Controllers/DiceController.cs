@@ -11,5 +11,12 @@ namespace BasicAPI.Controllers
     [ApiController]
     public class DiceController : ControllerBase
     {
+        [HttpGet("{sides}")]
+        public int Roll(int sides)
+        {
+            var randomNumberGenerator = new Random();
+            var roll = randomNumberGenerator.Next(sides) + 1;
+            return roll;
+        }
     }
 }

@@ -18,7 +18,7 @@ namespace BasicAPI.Controllers
             // if (who == null)
             // {
             //     whoOrWorld = "World";
-            // }
+            // }                                       //ternary code above to simplify (if value assign value)
             // else
             // {
             //     whoOrWorld = who;
